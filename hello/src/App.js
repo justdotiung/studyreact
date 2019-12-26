@@ -1,16 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Ex1 from './ex1';
+import Clock from './Clock';
+//import Ex1 from './ex1';
 
-function App() {
-  return (
-    <div>
-      <Ex1  />
-      <Ex1  />
-      <Ex1  />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Clock />
+      </div>
+    );
+  }
 }
 
 export default App;
