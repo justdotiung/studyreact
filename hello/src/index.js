@@ -6,9 +6,14 @@ import * as serviceWorker from './serviceWorker';
 
 const formatName = user => user.firstName + '' +user.lastName;
 
+const style = {
+    backgroundColor : 'pink',
+    fontSize: '24px'
+};
+
 function getGreeting(user) {
     if (user) {
-      return <h1>Hello, {formatName(user)}!</h1>;
+      return <h1 className="sample">Hello, {formatName(user)}!</h1>;
     }
     return <h1>Hello, Stranger.</h1>;
   }
