@@ -13,11 +13,12 @@ class PhoneForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.parentState(
-            // name: this.state.name,
-            // phone: this.state.phone
-           { a: 'durl'}
-        )
+        this.props.parentState(this.state)
+        //초기화 작업
+        this.setState({
+            name : '',
+            phone: ''
+        })
     }
     render() {
         return (
@@ -34,8 +35,6 @@ class PhoneForm extends Component {
                     value={this.state.phone}
                 />
                 <input type ='submit' value='전송' onClick={this.handleSubmit}/>
-                {this.state.name}
-                {this.state.phone}
             </form>
         );
     }
