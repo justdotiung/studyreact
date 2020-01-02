@@ -14,17 +14,15 @@ class Clock extends Component{
     }
     
     componentDidMount() {
-        console.log(this.tick())
         this.timerID = setInterval(
             () => this.tick()
             , 1000
             );
         }
         
-        componentWillUnmount() {
-            clearInterval(this.timerID);
-        }
-        
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
         
     render(){
         return (
